@@ -26,3 +26,22 @@ li:not(li:nth-child(3)) {
 li > span {
   border-bottom: 1px solid black;
 }
+
+.submitMsg {
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: black;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  border-color: grey;
+  border-bottom-style: inset;
+  border-right-style: inset;
+}
+
+.submitMsg > a {
+  text-decoration: none;
+  color: black;
+}
