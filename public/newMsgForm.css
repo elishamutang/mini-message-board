@@ -3,50 +3,49 @@
   padding: 0;
 }
 
-main {
-  margin: 2rem;
+body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 2rem;
+  height: 100vh;
 }
 
-div {
+#submitMsgForm {
+  margin: 2rem;
+  margin-top: 20vh;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
 }
 
-li:not(li:nth-child(3)) {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+#submitMsgForm > h1 {
+  margin-bottom: 2rem;
 }
 
-li > span {
-  border-bottom: 1px solid black;
+#submitMsgForm > label {
+  font-size: 1rem;
+}
+
+#submitMsgForm > input {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  padding: 0.8rem;
   color: blue;
 }
 
-.submitMsg {
+#submitMsgForm > button {
+  padding: 0.8rem;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  padding: 0.8rem;
   text-decoration: none;
   background-color: transparent;
   border-radius: 0.5rem;
   border-color: grey;
   border-bottom-style: inset;
   border-right-style: inset;
-}
-
-.submitMsg > a {
-  text-decoration: none;
-  color: black;
   transition: 0.3s;
 }
 
-.submitMsg:hover > a {
+#submitMsgForm > button:hover {
   color: blue;
 }
