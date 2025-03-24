@@ -4,23 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mini Message Board</title>
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/index.css" />
   </head>
   <body>
     <main>
-      <h1><%= title %></h1>
+      <h1 class="title"><%= title %></h1>
       <div>
         <% messages.forEach((message) => { %>
-        <ul>
+        <a href="messages/<%= message.id %>" class="userDetails">
           <h2><%= message.user %></h2>
-          <li>Message: <span><%= message.text %></span></li>
-          <li>Date added: <span><%= message.added %></span></li>
-        </ul>
+          <p>Message: <span><%= message.text %></span></p>
+          <p>Date added: <span><%= message.added %></span></p>
+        </a>
         <% }) %>
       </div>
-      <button class="submitMsg">
-        <a href="new">Submit your message!</a>
-      </button>
+      <a class="submitMsg" href="new">Submit your message!</a>
     </main>
   </body>
 </html>
