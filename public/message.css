@@ -1,0 +1,31 @@
+@import url("index.css");
+
+.userDetails {
+  gap: 0;
+}
+
+.userDetails:hover {
+  scale: 1;
+}
+
+.userDetails p:nth-child(2) {
+  text-wrap: wrap;
+  overflow: auto;
+}
+
+.homeBtn {
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 0.5rem;
+  border: 2px solid black;
+  transition: 0.3s;
+  text-decoration: none;
+  color: black;
+}
+
+.homeBtn:hover {
+  color: blue;
+}
