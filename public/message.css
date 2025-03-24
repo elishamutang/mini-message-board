@@ -2,6 +2,7 @@
 
 .userDetails {
   gap: 0;
+  align-items: flex-start;
 }
 
 .userDetails:hover {
@@ -11,6 +12,7 @@
 .userDetails p:nth-child(2) {
   text-wrap: wrap;
   overflow: auto;
+  font-size: 1.5rem;
 }
 
 .homeBtn {
