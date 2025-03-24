@@ -8,13 +8,13 @@
   </head>
   <body>
     <form method="POST" action="/new" id="submitMsgForm">
-      <h1>Submit Your Message!</h1>
+      <h1 class="title">Submit Your Message!</h1>
 
-      <label for="name"> <strong>Name:</strong> </label>
-      <input type="text" id="name" name="name" placeholder="John Doe" />
+      <label for="name"> <strong>Name</strong> </label>
+      <input type="text" id="name" name="name" placeholder="John Doe" required />
 
-      <label for="message"> <strong>Message:</strong> </label>
-      <input id="message" name="message" placeholder="Hello world!" />
+      <label for="message"> <strong>Message</strong> </label>
+      <input id="message" name="message" placeholder="Hello world!" required />
 
       <button type="submit">Submit</button>
     </form>
