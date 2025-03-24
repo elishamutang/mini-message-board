@@ -1,7 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-}
+@import url("index.css");
 
 body {
   display: flex;
@@ -12,7 +9,7 @@ body {
 
 #submitMsgForm {
   margin: 2rem;
-  margin-top: 20vh;
+  margin-top: 10vh;
   display: flex;
   flex-direction: column;
 }
@@ -23,6 +20,7 @@ body {
 
 #submitMsgForm > label {
   font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 #submitMsgForm > input {
@@ -38,9 +36,9 @@ body {
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
-  background-color: transparent;
+  background-color: white;
   border-radius: 0.5rem;
-  border-color: grey;
+  border-color: black;
   border-bottom-style: inset;
   border-right-style: inset;
   transition: 0.3s;
