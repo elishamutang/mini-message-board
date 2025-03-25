@@ -21,14 +21,14 @@ const messages = [
 const indexRouter = Router();
 
 indexRouter.get("/", (req, res) => {
-  res.render("index", { title: title, messages: messages });
+  res.render("index", { title: title, messages: messages, button: { href: "/new", text: "Submit your message!" } });
 });
 
 indexRouter.get("/messages/:messageId", (req, res) => {
   const { messageId } = req.params;
   const requestedMsg = messages.find((message) => message.id === Number(messageId));
 
-  res.render("message", { title: title, message: requestedMsg });
+  res.render("message", { title: title, message: requestedMsg, button: { href: "/", text: "Home" } });
 });
 
 indexRouter.get("/new", (req, res) => {
