@@ -14,7 +14,7 @@ Leave a message! P.S Please be nice :)
 
 ![submit-msg-form](public/assets/submit_msg_form.png)
 
-# Run this on your machine
+# To run this on your machine
 
 1. Fork or clone a local copy on your machine.
 2. Open up the repo in your favorite IDE.
