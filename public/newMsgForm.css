@@ -42,6 +42,7 @@ body {
   border-bottom-style: inset;
   border-right-style: inset;
   transition: 0.3s;
+  color: black;
 }
 
 #submitMsgForm > button:hover {
