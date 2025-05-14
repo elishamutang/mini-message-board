@@ -1,55 +1,12 @@
 import { Router } from "express";
-import { format } from "date-fns";
-
-const title = "Mini Message Board";
-
-const messages = [
-  {
-    id: 1,
-    text: "Hi there!",
-    user: "Amando",
-    added: format(new Date(), "PPPPpppp"),
-  },
-  {
-    id: 2,
-    text: "Hello World!",
-    user: "Charles",
-    added: format(new Date(), "PPPPpppp"),
-  },
-];
+import * as messageController from "../controllers/messagesController.js";
 
 const indexRouter = Router();
 
-indexRouter.get("/", (req, res) => {
-  res.render("index", { title: title, messages: messages, button: { href: "/new", text: "Submit your message!" } });
-});
-
-indexRouter.get("/messages/:messageId", (req, res) => {
-  const { messageId } = req.params;
-  const requestedMsg = messages.find((message) => message.id === Number(messageId));
-
-  res.render("message", { title: title, message: requestedMsg, button: { href: "/", text: "Home" } });
-});
-
-indexRouter.get("/new", (req, res) => {
-  res.render("form");
-});
-
-indexRouter.post("/new", (req, res) => {
-  messages.push({
-    id: messages.length + 1,
-    text: req.body.message,
-    user: req.body.name,
-    added: format(new Date(), "PPPPpppp"),
-  });
-
-  setTimeout(() => {
-    res.redirect("/");
-  }, 1000);
-});
-
-indexRouter.all("*", (req, res) => {
-  res.render("error", { errorMsg: "ERROR, INVALID URL :/" });
-});
+indexRouter.get("/", messageController.getMessages);
+indexRouter.get("/messages/:messageId", messageController.getSingleMessage);
+indexRouter.get("/new", messageController.createNewMessage);
+indexRouter.post("/new", messageController.submitNewMessage);
+indexRouter.all("*", messageController.error);
 
 export default indexRouter;
