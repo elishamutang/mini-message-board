@@ -12,13 +12,13 @@
       <div>
         <% messages.forEach((message) => { %>
         <a href="messages/<%= message.id %>" class="userDetails">
-          <h2><%= message.user %></h2>
-          <p>Message: <span><%= message.text %></span></p>
-          <p>Date added: <span><%= message.added %></span></p>
+          <h2><%= message.username %></h2>
+          <p>Message: <span><%= message.message %></span></p>
+          <p>Date added: <span><%= message.created_at %></span></p>
         </a>
         <% }) %>
       </div>
-      <%- include('navBtns', { button: button }) %>
+      <a class="navBtn" href="/new">Submit your message!</a>
     </main>
   </body>
 </html>

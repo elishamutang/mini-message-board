@@ -10,11 +10,11 @@
     <main>
       <h1 class="title"><%= title %></h1>
       <div class="userDetails">
-        <h2><%= message.user %>'s message</h2>
-        <p><%= message.text %></p>
-        <p>Date added: <span><%= message.added %></span></p>
+        <h2><%= message.username %>'s message</h2>
+        <p><%= message.message %></p>
+        <p>Date added: <span><%= message.created_at %></span></p>
       </div>
-      <%- include('navBtns', {button:button}) %>
+      <a class="navBtn" href="/">Home</a>
     </main>
   </body>
 </html>
