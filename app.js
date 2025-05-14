@@ -2,8 +2,9 @@ import express from "express";
 import path from "node:path";
 import url from "node:url";
 import indexRouter from "./routes/indexRouter.js";
+import "dotenv/config";
 
-const PORT = 3000;
+const PORT = process.env.PORT;
 const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const assetsPath = path.join(__dirname, "public");
